@@ -2,10 +2,10 @@ import { Request, Response } from 'express';
 import CryptoDataModel from '../models/CryptoDataModel';
 
 export const getCryptoStats = async (req: Request, res: Response): Promise<any> => {
-  const { coin } = req.query;
+  const { coinType } = req.query;
 
   try {
-    const cryptoData = await CryptoDataModel.findOne({ coin });
+    const cryptoData = await CryptoDataModel.findOne({ coinType }).sort({ timestamp: -1 });
     if (!cryptoData) return res.status(404).json({ error: 'Coin not found' });
     
     res.status(200).json(cryptoData);
