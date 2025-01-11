@@ -2,12 +2,13 @@
   "name": "koinxbackendassignment",
   "version": "1.0.0",
   "description": "Its is assignment for koinX company for role as backend intern",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "nodemon dist/server.js",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "vercel-build": "npm run build"
   },
   "author": "",
   "license": "ISC",
