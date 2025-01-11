@@ -4,11 +4,11 @@
   "description": "Its is assignment for koinX company for role as backend intern",
   "main": "server.js",
   "scripts": {
+    "vercel-build": "tsc && npm run build",
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "nodemon dist/server.js",
-    "watch": "tsc -w",
-    "vercel-build": "npm run build"
+    "watch": "tsc -w"
   },
   "author": "",
   "license": "ISC",
@@ -19,12 +19,13 @@
     "express": "^4.21.2",
     "mongoose": "^8.9.4",
     "node-cron": "^3.0.3",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "typescript": "^5.7.3",
+    "@types/node": "^22.10.5"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.10.5",
     "@types/node-cron": "^3.0.11"
   }
 }
