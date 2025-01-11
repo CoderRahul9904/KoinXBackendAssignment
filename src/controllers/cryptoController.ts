@@ -7,7 +7,6 @@ export const getCryptoStats = async (req: Request, res: Response): Promise<any> 
   try {
     const cryptoData = await CryptoDataModel.findOne({ coinType }).sort({ timestamp: -1 });
     if (!cryptoData) return res.status(404).json({ error: 'Coin not found' });
-    
     res.status(200).json(cryptoData);
   } catch (error) {
     res.status(500).json({ error: 'Server error' });
